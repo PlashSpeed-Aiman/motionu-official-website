@@ -8,9 +8,9 @@ import { createClient } from 'contentful';
 export default async function Page() {
    // DON'T TOUCH THIS PART
   const client = await contentful.createClient({
-    space: process.env.SPACE,
+    space: process.env.CONTENTFUL_SPACE_ID,
     environment: "master",
-    accessToken: process.env.ACCESS_TOKEN, 
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN, 
   });
   
   return (
