@@ -15,13 +15,13 @@ export default function Page() {
   useEffect(() => {
     const fetchContentfulData = async () => {
       try {
-        const accessToken = process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN;
+        const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
         if (!accessToken) {
           throw new Error('Contentful access token not found.');
         }
 
         const client = createClient({
-          space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+          space: process.env.CONTENTFUL_SPACE_ID,
           environment: "master",
           accessToken: accessToken,
         });
