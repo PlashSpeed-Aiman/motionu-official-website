@@ -1,14 +1,11 @@
-'use client'
 
-import React, { useState, useEffect } from 'react';
 import BlogPostCard from '../components/BlogPostCard';
 import Heading from '../components/Heading';
 import { createClient } from 'contentful';
 
 // const CONTENTFUL_SPACE_ID = process.env.REACT_APP_CONTENTFUL_SPACE_ID;
 // const CONTENTFUL_ACCESS_TOKEN = process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN;
-
-export default function Page() {
+export default async function Page() {
    // DON'T TOUCH THIS PART
   const client = await contentful.createClient({
     space: process.env.SPACE,
